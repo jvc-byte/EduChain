@@ -11,7 +11,7 @@ const Navbar = () => {
               <CiSearch className='text-white absolute left-4 h-6 w-6 sm-hidden'/>
               <input type="text" placeholder='Search for lesson' className='bg-[#040B35] sm-hidden rounded-md pl-12 h-12 w-full text-sm lg:w-96 text-white border border-[grey]' />
             </div>
-            <button className='border text-white sm-hidden hover:border-[#E6169B] p-3'>Explore Lessons</button>
+            <button className='border text-white sm-hidden md:hidden hover:border-[#E6169B] p-3'>Explore Lessons</button>
             <ConnectWalletButton />
         </div>
         <div className="flex items-center relative px-8 mt-5">
