@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ConnectWallet, WalletDropdown, WalletDropdownDisconnect } from '@coinbase/onchainkit/wallet';
 import { Avatar, Name, Address, EthBalance } from '@coinbase/onchainkit/identity';
 import { getUserCountryFromIP } from './locationUtils';  // Import the utility function
-import { Button } from '../components/ui/button';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -17,7 +16,7 @@ function WalletComponent() {
 
       if (country === 'Nigeria') {
         // Show toast warning for Nigeria
-        toast("You are accessing from Nigeria. Please use a VPN! Proton VPN Recomended.");
+        toast("You are accessing from Nigeria. Please use a VPN! Proton VPN Recommended.");
       }
     } catch (error) {
       console.error("Error fetching user location:", error);
