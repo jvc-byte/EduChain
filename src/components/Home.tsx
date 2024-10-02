@@ -20,7 +20,11 @@ const Home = () => {
      <div className="my-16">
        <StartJourney />
      </div>
-      <FeatureContent />
+     <div className="">
+       <h1 className='text-white text-3xl py-8 pl-32'>Feature Content</h1>
+       <FeatureContent />
+     </div>
+      
       <ExploreCardContent />
       <BecomeInstructor />
       <Footer />

@@ -4,7 +4,6 @@ import FeatureCard from '../src/components/FeatureCard'
 const FeatureContent = () => {
   return (
     <div>
-      <h1 className='text-white text-3xl px-32 py-8'>Feature Content</h1>
       <FeatureCard imageUrl='./feature1.svg' 
        logo='./start1.svg' 
        title='Ethereum Basics' 
