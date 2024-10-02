@@ -1,0 +1,26 @@
+.bg-color{
+  background-color: #040B35;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-button{
+  background: linear-gradient(180deg, #654FF0 0%, #E6169B 100%);
+}
+
+.start-journey{
+  background: linear-gradient(190deg, #0f006e 80%, #E6169B 0%);
+}
+
+.footer-bg{
+  background: rgba(255, 255, 255, 0.05);
+
+}
+
+@media screen and (max-width: 768px) {
+  .sm-hidden{
+    display: none;
+  }
+}
+
