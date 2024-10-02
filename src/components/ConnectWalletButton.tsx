@@ -7,7 +7,7 @@ function WalletComponent() {
     <div>
       <ConnectWallet className='border text-white text-sm lg:text-2xl bg-[#040B35]  mr-8 lg:mr-0 md:mr-8 p-3'>
         <Avatar className='bg-white'/>
-        <Name className='text-white text-sm'/>
+        <Name className='text-white text-xs lg:text-lg md:text-sm'/>
         <div className="block">
           <Address isSliced={true} className='text-white sm-hidden' />
           <EthBalance className='text-white sm-hidden' />
