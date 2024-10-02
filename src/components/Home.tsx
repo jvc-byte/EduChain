@@ -17,7 +17,9 @@ const Home = () => {
        <Explore />
       </div>
      {/* <VideoPlayer /> */}
-      <StartJourney />
+     <div className="my-16">
+       <StartJourney />
+     </div>
       <FeatureContent />
       <ExploreCardContent />
       <BecomeInstructor />
