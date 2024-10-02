@@ -26,7 +26,7 @@ function WalletComponent() {
 
   return (
     <div>
-      <Button className='bg-none' onClick={checkLocationAndShowToast}>
+      <div className='bg-none' onClick={checkLocationAndShowToast}>
       <ConnectWallet className='border text-white text-sm lg:text-2xl bg-[#040B35] mr-8 lg:mr-0 md:mr-8 p-3'>
         <Avatar className='bg-white'/>
         <Name className='text-white text-xs lg:text-lg md:text-sm'/>
@@ -35,7 +35,7 @@ function WalletComponent() {
           <EthBalance className='text-white sm-hidden' />
         </div>
       </ConnectWallet>
-      </Button>
+      </div>
       
       <WalletDropdown className='right-10'>
         <WalletDropdownDisconnect className='mr-10' />
