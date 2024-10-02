@@ -1,7 +1,7 @@
 // locationUtils.ts
 
-export const API_KEY = 'c8fff21c71d34b58896e17ab6b26ab3c';
-export const IP_GEOLOCATION_API = 'https://api.ipgeolocation.io/ipgeo';
+export const API_KEY = import.meta.env.VITE_PUBLIC_API_KEY;
+export const IP_GEOLOCATION_API = import.meta.env.VITE_PUBLIC_IP_GEOLOCATION_API;
 
 /**
  * Fetch the user's country location based on their IP address.
@@ -11,7 +11,7 @@ export const getUserCountryFromIP = async (): Promise<string> => {
   try {
     const response = await fetch(`${IP_GEOLOCATION_API}?apiKey=${API_KEY}`);
     const data = await response.json();
-    console.log(data.country_name)
+    console.log(data.country_name);
     return data.country_name; // Return country name
   } catch (error) {
     console.error('Error fetching location:', error);
