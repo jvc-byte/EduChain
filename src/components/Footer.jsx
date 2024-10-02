@@ -20,8 +20,8 @@ const Footer = () => {
                 </div>
             </div>
        
-            <div className="flex gap-0.5 py-5 px-5">
-             <img src="./english.svg" alt="" className="h-4 w-4 lg:h-7 lg:w-7" />
+            <div className="flex items-center gap-0.5 py-5 px-5">
+             <img src="./english.svg" alt="" className="h-4 w-4 lg:h-7 lg:w-7 md:h-6 md:w-6" />
              <h1>English</h1>
             </div>
         
