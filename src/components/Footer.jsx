@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
        
             <div className="flex gap-1.5 py-5 px-5">
-             <img src="./english.svg" alt="" className="h-7 w-7" />
+             <img src="./english.svg" alt="" className="h-5 w-5 lg:h-7 lg:w-7" />
              <h1>English</h1>
             </div>
         
