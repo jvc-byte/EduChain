@@ -4,8 +4,8 @@ const Footer = () => {
     <div className="footer-bg">
         <div className="flex justify-between gap-10 text-white px-5 lg:px-32 md:px-32 border border-t-2 border-b-0 border-r-0 border-l-0 border-[#1600a6]">
         
-            <div className="flex gap-20">
-                <div className="block list-none underline py-5">
+            <div className="flex gap-10 lg:gap-20 md:gap-16">
+                <div className="block list-none underline py-5 flex-shrink-0">
                     <a><li href="">EduChain</li> </a>
                     <a><li href="">Teach on EduChain</li> </a>
                     <a><li href="">About us</li></a>
