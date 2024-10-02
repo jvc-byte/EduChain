@@ -1,11 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ConnectWallet, WalletDropdown, WalletDropdownDisconnect } from '@coinbase/onchainkit/wallet';
 import { Avatar, Name, Address, EthBalance } from '@coinbase/onchainkit/identity';
+import { getUserCountryFromIP } from './locationUtils';  // Import the utility function
+import { Button } from '../components/ui/button';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function WalletComponent() {
+  const [location, setLocation] = useState<string | null>(null);
+
+  const checkLocationAndShowToast = async () => {
+    try {
+      const country = await getUserCountryFromIP();
+      setLocation(country);
+
+      if (country === 'Nigeria') {
+        // Show toast warning for Nigeria
+        toast("You are accessing from Nigeria. Please use a VPN! Proton VPN Recomended.");
+      }
+    } catch (error) {
+      console.error("Error fetching user location:", error);
+    }
+  };
+
   return (
     <div>
-      <ConnectWallet className='border text-white text-sm lg:text-2xl bg-[#040B35]  mr-8 lg:mr-0 md:mr-8 p-3'>
+      <Button onClick={checkLocationAndShowToast}>
+      <ConnectWallet className='border text-white text-sm lg:text-2xl bg-[#040B35] mr-8 lg:mr-0 md:mr-8 p-3'>
         <Avatar className='bg-white'/>
         <Name className='text-white text-xs lg:text-lg md:text-sm'/>
         <div className="block">
@@ -13,9 +35,15 @@ function WalletComponent() {
           <EthBalance className='text-white sm-hidden' />
         </div>
       </ConnectWallet>
+      </Button>
+      
       <WalletDropdown className='right-10'>
         <WalletDropdownDisconnect className='mr-10' />
       </WalletDropdown>
+
+   
+      <ToastContainer autoClose={false} pauseOnFocusLoss={true} />
+
     </div>
   );
 }
