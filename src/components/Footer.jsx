@@ -2,7 +2,7 @@
 const Footer = () => {
   return (
     <div className="footer-bg">
-        <div className="flex justify-between gap-10 text-white px-5 lg:px-32 md:px-32 border border-t-2 border-b-0 border-[#1600a6]">
+        <div className="flex justify-between gap-10 text-white px-5 lg:px-32 md:px-32 border border-t-2 border-b-0 border-r-0 border-l-0 border-[#1600a6]">
         
             <div className="flex gap-20">
                 <div className="block list-none underline py-5">
@@ -20,14 +20,14 @@ const Footer = () => {
                 </div>
             </div>
        
-            <div className="flex gap-1.5 py-5 ">
+            <div className="flex gap-1.5 py-5 px-5">
              <img src="./english.svg" alt="" className="h-7 w-7" />
              <h1>English</h1>
             </div>
         
         </div>
         <div className="flex justify-between items-center px-5 lg:px-28 md:px-28 border-none">
-            <img src="./logo.svg" alt="" />
+            <img src="./logo.svg" alt="" className="w-32 lg:w-40 md:w-40"/>
             <h2 className="text-white flex-shrink-0">© 2024 EduChain.</h2>
         </div>
     </div>

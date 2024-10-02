@@ -21,7 +21,7 @@ const Home = () => {
        <StartJourney />
      </div>
      <div className="">
-       <h1 className='text-white text-3xl py-8 pl-32'>Feature Content</h1>
+       <h1 className='text-white text-3xl py-8 pl-12 lg:pl-32 md:pl-32'>Feature Content</h1>
        <FeatureContent />
      </div>
       
