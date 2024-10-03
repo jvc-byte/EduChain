@@ -28,7 +28,7 @@ const PopularCerticateCourse = () => {
                   </div>
                   <button
                     onClick={() => handleStartLesson(make)} // Add course to Redux
-                    className='border text-white hover:border-[#E6169B] p-3'
+                    className='border flex-shrink-0 text-sm lg:text-lg md:text-lg text-white hover:border-[#E6169B] p-3'
                   >
                     Start Lesson
                   </button>
