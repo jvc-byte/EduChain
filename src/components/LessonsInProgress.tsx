@@ -5,7 +5,7 @@ const LessonsInProgress = () => {
     const selectedCourses = useSelector((state) => state.course.selectedCourses); // Get all selected courses from Redux
   
     if (selectedCourses.length === 0) {
-      return <h1 className='my-16 px-12 lg:px-32 md:px-32'>No courses selected.</h1>;
+      return <h1 className='my-16 px-12 lg:px-32 h-72 md:px-32'>No courses selected.</h1>;
     }
 
   return (
