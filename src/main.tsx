@@ -6,6 +6,7 @@ import React from 'react'
 import { base } from 'viem/chains';
 import Providers from './providers.js'
 
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Providers>

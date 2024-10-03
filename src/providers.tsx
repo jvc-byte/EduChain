@@ -3,7 +3,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { base } from 'wagmi/chains'; 
 import { type ReactNode, useState } from 'react';
 import { type State, WagmiProvider } from 'wagmi';
-import React from 'react';
 import { wagmiConfig } from './wagmi';
  
 function Providers(props: {
