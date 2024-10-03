@@ -1,5 +1,5 @@
 import React from 'react'
-import ExploreCard from '../src/components/ExploreCard'
+import ExploreCard from '../../src/components/ExploreCard'
 
 const ExploreCardContent = () => {
   return (

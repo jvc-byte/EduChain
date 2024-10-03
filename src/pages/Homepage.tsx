@@ -1,9 +1,3 @@
-import React from 'react'
-import OnChain from '../components/ConnectWalletButton'
-import SignupButton from '../components/SignUpButton'
-import IdentityCard from '../components/IdentityCard'
-import Framer from '../components/Framer'
-import '@coinbase/onchainkit/styles.css';
 import Home from '../components/Home'
 
 {/*

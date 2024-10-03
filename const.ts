@@ -18,4 +18,60 @@ export const videoData = [
       description: "Learn how to build decentralized applications (DApps) on Ethereum."
     }
   ];
+
+  export const PopularCertificateCourse = [
+    {
+       id: 1,
+       imageUrl: './feature1.svg' ,
+       logo: './start1.svg', 
+       title: 'Ethereum Basics', 
+       description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
+       name: 'Educhain',
+    },
+    {
+      id: 2,
+      imageUrl: './feature1.svg' ,
+      logo: './start1.svg', 
+      title: 'Ethereum Basics', 
+      description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
+      name: 'Educhain',
+   },
+   {
+    id: 3,
+    imageUrl: './feature1.svg' ,
+    logo: './start1.svg', 
+    title: 'Ethereum Basics', 
+    description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
+    name: 'Educhain',
+   },
+  ];
+
+  export const NewCertificateCourse = [
+    {
+       id: 1,
+       imageUrl: './feature1.svg' ,
+       logo: './start1.svg', 
+       title: 'Ethereum Basics', 
+       description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
+       name: 'Educhain',
+    },
+    {
+      id: 2,
+      imageUrl: './feature1.svg' ,
+      logo: './start1.svg', 
+      title: 'Ethereum Basics', 
+      description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
+      name: 'Educhain',
+   },
+   {
+    id: 3,
+    imageUrl: './feature1.svg' ,
+    logo: './start1.svg', 
+    title: 'Ethereum Basics', 
+    description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
+    name: 'Educhain',
+   },
+  ];
+  
+
   

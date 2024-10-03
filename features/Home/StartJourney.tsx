@@ -1,5 +1,5 @@
 import React from 'react'
-import StartJourneyCard from '../src/components/StartCard'
+import StartJourneyCard from '../../src/components/StartCard'
 
 const StartJourney = () => {
   return (
