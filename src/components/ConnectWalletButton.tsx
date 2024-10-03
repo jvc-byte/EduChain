@@ -16,7 +16,7 @@ function WalletComponent() {
 
       if (country === 'Nigeria') {
         // Show toast warning for Nigeria
-        toast("You are accessing from Nigeria. Please use a VPN! Proton VPN Recommended.");
+        toast("Access detected from Nigeria. Please use a VPN. We recommend Proton VPN. Refresh the page and try again.");
       }
     } catch (error) {
       console.error("Error fetching user location:", error);
