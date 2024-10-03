@@ -10,7 +10,7 @@ const LearningHeader = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex gap-10 px-12 lg:px-32 md:px-32 pt-5 text-white text-lg border-[#1600a6] border-b-2">
+      <div className="flex gap-10 px-12 lg:px-32 md:px-32 pt-5 text-white text-sm lg:text-lg md:text-lg border-[#1600a6] border-b-2">
         <Link
           to="/learningpage"
           className={`cursor-pointer ${isActive('/learningpage') ? 'border-b-2 border-[#E6169B]' : ''}`}
@@ -19,7 +19,7 @@ const LearningHeader = () => {
         </Link>
         <Link
           to="/my-lessons"
-          className={`cursor-pointer ${isActive('/my-lessons') ? 'border-b-2 border-[#E6169B]' : ''}`}
+          className={`cursor-pointer flex-shrink-0 ${isActive('/my-lessons') ? 'border-b-2 border-[#E6169B]' : ''}`}
         >
           My Lessons
         </Link>

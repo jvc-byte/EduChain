@@ -14,7 +14,7 @@ const NewCerticateCourse = () => {
                                 <img src={make.logo} alt="" className='h-7 w-7' />
                                 <h1>{make.name}</h1>
                             </div>
-                            <button className='border text-white hover:border-[#E6169B] p-3'>Start Lesson</button>
+                            <button className='border text-white flex-shrink-0 text-sm lg:text-lg md:text-lg hover:border-[#E6169B] p-3'>Start Lesson</button>
                         </div>
                     </div>
                 </div>
