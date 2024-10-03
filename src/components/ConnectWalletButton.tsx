@@ -6,6 +6,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import WalletSelector from './WalletSelector';
 import { base } from 'viem/chains';
+import { IoIosClose } from "react-icons/io";
+
 
 function WalletComponent() {
   const [location, setLocation] = useState<string | null>(null);
@@ -51,7 +53,7 @@ function WalletComponent() {
   return (
     <div>
       <div className="" onClick={() => { checkLocationAndShowToast(); toggleModal(); }}>
-        <ConnectWallet className="border text-white text-sm lg:text-2xl bg-[#040B35] mr-8 lg:mr-0 md:mr-8 p-3" 
+        <ConnectWallet className="border text-white text-sm lg:text-2xl items-center bg-[#040B35] mr-8 lg:mr-0 md:mr-8 p-3" 
           onConnect={(connectedAddress) => setAddress(connectedAddress)} // Set the address when wallet is connected
         >
           <Avatar chain={base} defaultComponent={false} className="bg-white" />
@@ -77,7 +79,7 @@ function WalletComponent() {
       {showModal && (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
           <div className="bg-white rounded-lg p-4 w-96">
-            <button onClick={toggleModal} className="text-right mb-4">X</button>
+            <div onClick={toggleModal} className="text-right mb-4 relative"><IoIosClose className='absolute right-0 h-7 w-7' /></div>
             <WalletSelector />
           </div>
         </div>
