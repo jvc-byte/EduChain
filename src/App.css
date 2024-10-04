@@ -18,7 +18,7 @@
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 766px) {
   .sm-hidden{
     display: none;
   }
@@ -27,4 +27,15 @@
     width: 80%;
   }
 }
+
+@media screen and (max-width: 1022px) {
+  .md-hidden{
+    display: none;
+  }
+  .md-show{
+    display: flex;
+  }
+}
+
+
 
