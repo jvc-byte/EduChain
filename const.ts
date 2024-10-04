@@ -27,23 +27,34 @@ export const videoData = [
        title: 'Ethereum Basics', 
        description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
        name: 'Educhain',
+       videoUrl: 'https://youtu.be/6R_er-V81nI?si=NJ_N9Q6WD-2NBxXa',
     },
     {
       id: 2,
       imageUrl: './feature1.svg' ,
       logo: './start1.svg', 
-      title: 'Ethereum Basics', 
+      title: 'Ethereum Basics 2', 
       description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
       name: 'Educhain',
+      videoUrl: 'https://www.youtube.com/watch?v=LXb3EKWsInQ',
    },
    {
     id: 3,
     imageUrl: './feature1.svg' ,
     logo: './start1.svg', 
-    title: 'Ethereum Basics', 
+    title: 'Ethereum Basics 3', 
     description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
     name: 'Educhain',
    },
+   {
+    id: 4,
+    imageUrl: './feature1.svg' ,
+    logo: './start1.svg', 
+    title: 'Ethereum Basics 4', 
+    description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
+    name: 'Educhain',
+    videoUrl: 'https://www.youtube.com/watch?v=LXb3EKWsInQ',
+ },
   ];
 
   export const NewCertificateCourse = [

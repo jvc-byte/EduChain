@@ -6,6 +6,7 @@ import { ToastDestructive } from './components/TestToast';
 import SearchResults from './components/SearchResults';
 import LearningPage from './pages/LearningPage';
 import MyLessons from './components/MyLessons';
+import ClassRoom from './components/ClassRoom';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/search" element={<SearchResults />} />
           <Route path="/learningpage" element={<LearningPage />} />
           <Route path="/my-lessons" element={<MyLessons />} />
+          <Route path="/course/:id" element={<ClassRoom />} />
 
         </Routes>
       </BrowserRouter>

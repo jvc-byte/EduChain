@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className="">
         <div className='flex items-center justify-between py-5 lg:py-3 md:py-3 lg:justify-evenly'>
-            <img src="./logo.svg" alt="" className='w-40 lg:w-60' />
+            <img src="/logo.svg" alt="" className='w-40 lg:w-60' />
             <div className="sm-hidden">
               <SearchBar />
             </div>

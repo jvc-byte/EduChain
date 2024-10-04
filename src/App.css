@@ -22,5 +22,9 @@
   .sm-hidden{
     display: none;
   }
+              
+  .width-sm{
+    width: 80%;
+  }
 }
 
