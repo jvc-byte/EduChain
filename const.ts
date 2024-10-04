@@ -45,6 +45,7 @@ export const videoData = [
     title: 'Ethereum Basics 3', 
     description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
     name: 'Educhain',
+    videoUrl: 'https://youtu.be/6R_er-V81nI?si=rqFVDeiq00Toedsf',
    },
    {
     id: 4,
