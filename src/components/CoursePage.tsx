@@ -47,7 +47,7 @@ const CoursePage = () => {
         </div>
       </div>
 
-      <div className="px-12 lg:px-32 md:px-32 py-10 lg:py-10 md:py-20 space-y-3">
+      <div className="pl-12 lg:pl-32 md:pl-32 py-10 lg:py-10 md:py-20 space-y-3">
         {loading ? (
           <>
             <Skeleton width={300} height={40} duration={1.5} />
