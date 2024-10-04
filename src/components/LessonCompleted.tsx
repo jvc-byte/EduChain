@@ -1,11 +1,26 @@
-import React from 'react'
+import { useSelector } from 'react-redux';
+
 
 const LessonCompleted = () => {
+  const completedCourses = useSelector((state) => state.course.completedCourses);
   return (
-    <div className='my-10 h-72'>
-      <h1 className='px-12 lg:px-32 md:px-32'>No Completed Lessons Yet</h1>
+    <div className="">
+      <h1 className="text-3xl">Courses Completed</h1>
+      {completedCourses.length === 0 ? (
+        <p>No course completed yet.</p>
+      ) : (
+        <ul>
+          {completedCourses.map((course) => (
+            <li key={course.id}>
+              <h2>{course.title}</h2>
+              <img src={course.imageUrl} alt="" />
+              <span className="badge">Completed</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
-  )
-}
+  );
+};
 
 export default LessonCompleted

@@ -7,6 +7,8 @@ import SearchResults from './components/SearchResults';
 import LearningPage from './pages/LearningPage';
 import MyLessons from './components/MyLessons';
 import ClassRoom from './components/ClassRoom';
+import QuizPage from './components/QuizPage';
+import LessonCompleted from './components/LessonCompleted';
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
           <Route path="/learningpage" element={<LearningPage />} />
           <Route path="/my-lessons" element={<MyLessons />} />
           <Route path="/course/:id" element={<ClassRoom />} />
+          <Route path="/quiz/:id" element={<QuizPage />} />
+          <Route path="/my-lessons" element={<LessonCompleted />} />
+
 
         </Routes>
       </BrowserRouter>

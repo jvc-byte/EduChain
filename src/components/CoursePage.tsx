@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import ReactPlayer from 'react-player/lazy';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
 const CoursePage = () => {
   const { id } = useParams(); // Get course ID from the URL
   const selectedCourses = useSelector((state) => state.course.selectedCourses);
-  
   const course = selectedCourses.find((course) => course.id === parseInt(id));
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate(); // For navigation
 
   useEffect(() => {
     // Simulate loading delay (remove or modify as needed based on real loading time)
@@ -20,6 +20,12 @@ const CoursePage = () => {
   if (!course && !loading) {
     return <h1>Course not found</h1>;
   }
+
+  // Function to generate quiz and navigate to quiz page
+  const handleStartQuiz = () => {
+    const questions = generateQuiz(course);
+    navigate(`/quiz/${id}`, { state: { questions } });
+  };
 
   return (
     <div className="text-white w-[80%]">
@@ -62,8 +68,24 @@ const CoursePage = () => {
           </>
         )}
       </div>
+      <button 
+        className='border text-white shadow-lg mx-12 my-5 lg:mx-32 md:mx-32 hover:border-[#E6169B] p-3'
+        onClick={handleStartQuiz}
+      >
+        Start Quiz
+      </button>
     </div>
   );
+};
+
+// Function to generate quiz questions based on the course content
+const generateQuiz = (course) => {
+  const { title, description } = course;
+  return [
+    { question: `What is a key feature of ${title}?`, options: ['A', 'B', 'C', 'D'], correctAnswer: 'A' },
+    { question: `Which of these is mentioned in ${description}?`, options: ['A', 'B', 'C', 'D'], correctAnswer: 'B' },
+    // Add more questions as needed
+  ];
 };
 
 export default CoursePage;
