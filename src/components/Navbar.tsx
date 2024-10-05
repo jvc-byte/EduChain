@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ConnectWalletButton from './ConnectWalletButton'
 import SearchBar from "./SearchBar";
 import SearchBarSm from "./SearchBarSm";
@@ -7,7 +8,9 @@ const Navbar = () => {
   return (
     <div className="">
         <div className='flex items-center justify-between py-5 lg:py-3 md:py-3 lg:justify-evenly'>
-            <img src="/logo.svg" alt="" className='w-40 lg:w-60' />
+            <Link to={'/'} >
+              <img src="/logo.svg" alt="" className='w-40 lg:w-60' />
+            </Link>
             <div className="sm-hidden">
               <SearchBar />
             </div>

@@ -20,7 +20,7 @@ const ClassHeader = () => {
           ClassRoom
         </Link>
         <Link
-          to={`/quiz/${id}`}
+          to={``}
           className={`cursor-pointer flex-shrink-0 ${isActive(`/quiz/${id}`) ? 'border-b-2 border-[#E6169B]' : ''}`}
         >
           Quiz

@@ -6,7 +6,7 @@ const LessonsInProgress = () => {
   const selectedCourses = useSelector((state) => state.course.selectedCourses);
 
   if (selectedCourses.length === 0) {
-    return <h1 className='px-12 lg:px-32 md:px-32 my-10 h-72'>No courses selected.</h1>;
+    return <h1 className='px-12 lg:px-32 md:px-32 my-10 h-72'>No Course IN PROGRESS.</h1>;
   }
 
   const handleGoToCourse = (id) => {

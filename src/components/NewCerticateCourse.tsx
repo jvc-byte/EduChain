@@ -1,5 +1,17 @@
 import { NewCertificateCourse } from "../../const"
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { addCourse } from '../../features/Learning/courseSlice';
+
 const NewCerticateCourse = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  
+  const handleStartLesson = (course) => {
+    dispatch(addCourse(course)); // Add course to Redux and localStorage
+    navigate('/my-lessons'); // Redirect to My Lessons page
+  };
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 w-[80%] mx-12 lg:mx-32 md:mx-32 gap-10">
         {NewCertificateCourse.map((make) => (
@@ -14,7 +26,12 @@ const NewCerticateCourse = () => {
                                 <img src={make.logo} alt="" className='h-7 w-7' />
                                 <h1>{make.name}</h1>
                             </div>
-                            <button className='border text-white flex-shrink-0 text-sm lg:text-lg md:text-lg hover:border-[#E6169B] p-3'>Start Lesson</button>
+                            <button
+                                onClick={() => handleStartLesson(make)} // Add course to Redux
+                                className='border flex-shrink-0 text-sm lg:text-lg md:text-lg text-white hover:border-[#E6169B] p-3'
+                            >
+                                 Start Lesson
+                            </button>
                         </div>
                     </div>
                 </div>
