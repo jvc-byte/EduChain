@@ -12,9 +12,11 @@ const CoursePage = () => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate(); // For navigation
 
+  
+
   useEffect(() => {
     // Simulate loading delay (remove or modify as needed based on real loading time)
-    setTimeout(() => setLoading(false), 2000);
+    setTimeout(() => setLoading(false), 500);
   }, [id]);
 
   if (!course && !loading) {
@@ -34,21 +36,31 @@ const CoursePage = () => {
           {loading ? (
             <Skeleton height={500} width={1000} duration={1.5} />
           ) : (
-            <ReactPlayer url={course.videoUrl} width={1000} />
+            <ReactPlayer url={course.videoUrl} light={course.imageUrl} width={1000} autoplay={1} rel={1} config={{
+              youtube: {
+                playerVars: { showinfo: 0 },
+                embedOptions: { showinfo: 0 }
+              },
+              facebook: {
+                appId: '12345'
+              }
+            }} 
+            
+            />
           )}
         </div>
         <div className="mx-24 lg:hidden sm-hidden">
           {loading ? (
             <Skeleton height={300} width={500} duration={1.5} />
           ) : (
-            <ReactPlayer url={course.videoUrl} width={500} />
+            <ReactPlayer url={course.videoUrl} light={course.imageUrl} width={500} />
           )}
         </div>
         <div className="mx-auto lg:hidden md:hidden">
           {loading ? (
             <Skeleton height={200} width={300} duration={1.5} />
           ) : (
-            <ReactPlayer url={course.videoUrl} width={300} />
+            <ReactPlayer url={course.videoUrl} light={course.imageUrl} width={300} />
           )}
         </div>
       </div>

@@ -36,7 +36,7 @@ export const videoData = [
   export const PopularCertificateCourse = [
     {
        id: 1,
-       imageUrl: './feature1.svg' ,
+       imageUrl: '/feature1.svg' ,
        logo: '/start1.svg', 
        title: 'Ethereum Basics', 
        description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
@@ -45,7 +45,7 @@ export const videoData = [
     },
     {
       id: 2,
-      imageUrl: './feature1.svg' ,
+      imageUrl: '/feature1.svg' ,
       logo: '/start1.svg', 
       title: 'Ethereum Basics 2', 
       description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
@@ -54,7 +54,7 @@ export const videoData = [
    },
    {
     id: 3,
-    imageUrl: './feature1.svg' ,
+    imageUrl: '/feature1.svg' ,
     logo: '/start1.svg', 
     title: 'Ethereum Basics 3', 
     description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
