@@ -80,6 +80,8 @@ const MyLessons = () => {
 
                 <hr className="w-32 lg:w-64 md:w-64 border-t-2 border-gray-300 mx-auto my-5" />
 
+                <p className='text-4xl px-12 lg:px-32 md:px-32 pt-10 pb-5'>B</p>
+
                 <p className='text-3xl pt-10 pb-5'>Base fee</p>
                 <p className='text-2xl'>
                     Every block has a reserve price known as the 'base fee'. It is the minimum gas fee a user must pay to include a transaction in the next block.
