@@ -24,19 +24,19 @@ const LearningHeader = () => {
             to="/learningpage"
             className={`cursor-pointer ${isActive('/learningpage') ? 'border-b-2 border-[#E6169B]' : ''}`}
           >
-            {t('Home')}
+            Home
           </Link>
           <Link
             to="/my-lessons"
             className={`cursor-pointer flex-shrink-0 ${isActive('/my-lessons') ? 'border-b-2 border-[#E6169B]' : ''}`}
           >
-            {t('My Lessons')}
+            My Lessons
           </Link>
           <Link
             to="/glossary"
             className={`cursor-pointer ${isActive('/glossary') ? 'border-b-2 border-[#E6169B]' : ''}`}
           >
-            {t('Glossary')}
+            Glossary
           </Link>
         </div>
 
