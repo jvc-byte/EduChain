@@ -1,0 +1,8 @@
+{
+    "header": {
+        "message": "Header"
+    },
+    "home": {
+        "body": "Body"
+    }
+}

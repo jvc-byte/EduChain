@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 const LessonsInProgress = () => {
   const navigate = useNavigate();
@@ -12,6 +13,10 @@ const LessonsInProgress = () => {
   const handleGoToCourse = (id) => {
     navigate(`/course/${id}`); // Navigate to course page with the course ID
   };
+
+  const [t, i18n] = useTranslation("global")
+
+
 
   return (
     <div>
@@ -26,6 +31,7 @@ const LessonsInProgress = () => {
                   className="h-full lg:h-64 md:h-64 w-full object-cover lg:w-[60%]"
                 />
                 <div className="space-y-5 p-5 lg:p-0 md:p-0">
+                  <p>{t('home.body')}</p>
                   <h1 className="text-3xl flex-shrink-0">{course.title}</h1>
                   <p className="text-xs">{course.description}</p>
                   <div className="flex items-center gap-1.5">

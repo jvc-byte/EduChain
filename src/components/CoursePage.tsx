@@ -20,7 +20,7 @@ const CoursePage = () => {
   }, [id]);
 
   if (!course && !loading) {
-    return <h1>Course not found</h1>;
+    return <h1 className='min-h-screen text-white pl-12 py-10 lg:pl-32 md:pl-32'>Course not found</h1>;
   }
 
   // Function to generate quiz and navigate to quiz page

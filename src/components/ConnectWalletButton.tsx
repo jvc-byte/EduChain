@@ -56,7 +56,7 @@ function WalletComponent() {
         <ConnectWallet className="border text-white text-sm lg:text-2xl items-center bg-[#040B35] mr-8 lg:mr-0 md:mr-8 p-3" 
           onConnect={(connectedAddress) => setAddress(connectedAddress)} // Set the address when wallet is connected
         >
-          <Avatar chain={base} defaultComponent={false} className="bg-white" />
+          <Avatar chain={base} className="bg-white" />
           
           {/* Display the fetched ENS or base name */}
           <div className="text-white text-xs lg:text-lg md:text-sm">
