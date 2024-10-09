@@ -1,18 +1,15 @@
 import { Link, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
-import { useTranslation } from 'react-i18next'; // Import translation hook
+
 
 const LearningHeader = () => {
   const location = useLocation(); // Get the current URL path
-  const [t, i18n] = useTranslation("global") // Initialize translation
+  
 
   // Function to check if a tab is active based on the URL
   const isActive = (path: string) => location.pathname === path;
 
-  // Function to handle language change
-  const handleChangeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
+  
 
   return (
     <div>
@@ -38,18 +35,6 @@ const LearningHeader = () => {
           >
             {t('Glossary')}
           </Link>
-        </div>
-
-        {/* Language Selector */}
-        <div>
-          <select
-            className="bg-[#1600a6] text-white p-2 rounded-lg"
-            onChange={(e) => handleChangeLanguage(e.target.value)}
-          >
-            <option value="en">English</option>
-            <option value="fr">Français</option>
-            <option value="es">Español</option>
-          </select>
         </div>
       </div>
     </div>
