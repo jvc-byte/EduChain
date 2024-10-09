@@ -20,11 +20,11 @@ function App() {
           <Route path='/test' element={<ToastDestructive />} />
           <Route path="/search" element={<SearchResults />} />
           <Route path="/learningpage" element={<LearningPage />} />
-          <Route path="/my-lessons" element={<MyLessons />} />
+          <Route path="/my-lessons/" element={<MyLessons />} />
           <Route path="/glossary" element={<Glossary />} />
           <Route path="/course/:id" element={<ClassRoom />} />
           <Route path="/quiz/:id" element={<QuizPage />} />
-          <Route path="/my-lessons" element={<LessonCompleted />} />
+          <Route path="/my-lessons/:id" element={<LessonCompleted />} />
           <Route path="/mintcertificate/:id" element={<MintCertificate />} />
 
 

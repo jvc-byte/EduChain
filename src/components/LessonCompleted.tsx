@@ -1,9 +1,11 @@
 import { useSelector } from 'react-redux';
 import { IoMdCheckmark } from "react-icons/io";
+import { Link, useParams } from 'react-router-dom';
 
 
 
 const LessonCompleted = () => {
+  const { id } = useParams(); 
   const completedCourses = useSelector((state) => state.course.completedCourses);
   return (
     <div className="">
@@ -23,7 +25,11 @@ const LessonCompleted = () => {
                     <h1>Completed</h1>
                     <IoMdCheckmark />
                     </div>
-                    <button className="border ml-12 lg:ml-0 md:ml-0 text-white hover:border-[#E6169B] p-3 flex-shrink-0 text-sm lg:text-lg md:text-lg">Get Certificate</button>
+                    <Link
+                       to={`/mintcertificate/${id}`} 
+                       >
+                       <button className="border mt-10 ml-12 lg:ml-0 md:ml-0 text-white hover:border-[#E6169B] p-3 flex-shrink-0 text-sm lg:text-lg md:text-lg">Get Certificate</button>
+                    </Link>
                   </div>
                 </div>
               </div>
