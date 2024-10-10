@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { MintCertification } from './MintCertification';
 
 const Certificate = () => {
   const completedCourses = useSelector((state) => state.course.completedCourses);
@@ -41,32 +42,7 @@ const Certificate = () => {
                   <div className="block lg:flex gap-10 my-10 mx-5">
                     <img src={course.imageUrl} className='h-full w-full object-cover lg:w-[60%]' alt="" />
                     <div className="mb-5">
-                      <form onSubmit={(e) => handleSubmit(e, course)}>
-                        <div className="space-y-6 mt-5 lg:mt-0">
-                          <div className="space-y-2">
-                            <label htmlFor="">Certificate Name</label>
-                            <input disabled value={course.title} className='block cursor-pointer px-5 w-full lg:w-[28rem] bg-[#040B35] h-12 border border-[#cacaca85]' type="text" />
-                          </div>
-                          <div className="space-y-2">
-                            <label htmlFor="">Address</label>
-                            <input
-                              className='block px-5 w-full lg:w-[28rem] bg-[#040B35] border h-12'
-                              onChange={(e) => setAddress(e.target.value)}
-                              placeholder='Address to receive certificate'
-                              type="text"
-                            />
-                          </div>
-                          <div className="space-y-2">
-                            <label htmlFor="">Certificate ID</label>
-                            <input disabled value={course.id} className='block cursor-pointer px-5 w-full lg:w-[28rem] bg-[#040B35] h-12 border border-[#cacaca85]' type="text" />
-                          </div>
-                          <div className="space-y-2">
-                            <label htmlFor="">Certificate Price (ETH)</label>
-                            <input disabled value={course.certificatePrice} className='block cursor-pointer px-5 w-full lg:w-[28rem] bg-[#040B35] h-12 border border-[#cacaca85]' type="text" />
-                          </div>
-                          <button type='submit' className="border text-white hover:border-[#E6169B] p-3 flex-shrink-0 text-sm lg:text-lg md:text-lg">Mint Certificate</button>
-                        </div>
-                      </form>
+                        <MintCertification />
                     </div>
                   </div>
                 </div>

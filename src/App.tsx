@@ -9,7 +9,7 @@ import MyLessons from './components/MyLessons';
 import Glossary from "./components/Glossary";
 import ClassRoom from './components/ClassRoom';
 import QuizPage from './components/QuizPage';
-import LessonCompleted from './components/LessonCompleted';
+import LessonCompleted from './components/LessonCompleted'; 
 import MintCertificate from './components/MintCertificate';
 
 function App() {

@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import LessonsInProgress from './LessonsInProgress';
-import LessonCompleted from './LessonCompleted';
 import LearningHeader from './LearningHeader';
 import Footer from './Footer';
 
