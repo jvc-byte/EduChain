@@ -1,32 +1,34 @@
 import React, { FormEvent, useState } from 'react';
-import { type BaseError, useWriteContract, useWaitForTransactionReceipt } from 'wagmi';
+import { useWriteContract, useWaitForTransactionReceipt, useAccount } from 'wagmi';
 import { contractABI, contractAddress } from '../DeployedContract';
-import { parseEther, type Hex } from 'viem'
+import { parseEther, type Hex } from 'viem';
+import { useSelector } from 'react-redux';
 
 export function MintCertification() {
     const [transactionHash, setTransactionHash] = useState<`0x${string}` | null>(null);
 
-    const { writeContract, data: hash, error, isPending } = useWriteContract()
-
-    const { isLoading: isConfirming, /*isSuccess: isConfirmed*/ } = useWaitForTransactionReceipt({
+    const { address: connectedAddress, isConnected } = useAccount();
+    const completedCourses = useSelector((state) => state.course.completedCourses);
+    const { writeContract, data: hash, error, isPending } = useWriteContract();
+    const { isLoading: isConfirming } = useWaitForTransactionReceipt({
         hash,
-    })
+    });
 
-    async function submit(e: FormEvent<HTMLFormElement>) {
-        e.preventDefault()
-        const formData = new FormData(e.target as HTMLFormElement)
-        const courseName = formData.get('coursName') as string
-        const address = formData.get('address') as Hex
-        const tokenURI = formData.get('tokenURI') as string
-        const amount = formData.get('value') as string
+    async function submit(e: FormEvent<HTMLFormElement>, course: any) {
+        e.preventDefault();
+        const formData = new FormData(e.target as HTMLFormElement);
+        const address = formData.get('address') as Hex;
+
+        // Ensure that the certificate price is converted to a string before passing it to parseEther
+        const price = course.certificatePrice ? parseEther(course.certificatePrice.toString()) : '0';
 
         writeContract({
             abi: contractABI,
             address: contractAddress,
             functionName: 'safeMintCertificate',
-            args: [courseName, address, tokenURI],
-            value: parseEther(amount)
-        })
+            args: [course.title, address, course.tokenURI],
+            value: price,
+        });
     }
 
     React.useEffect(() => {
@@ -37,54 +39,64 @@ export function MintCertification() {
 
     const getTransactionLink = (txHash: `0x${string}`) => {
         return `https://sepolia.basescan.org/tx/${txHash}`;
-    }
+    };
 
     return (
         <div className="pb-7">
-            <form className="set" onSubmit={submit}>
-                <div className="space-y-2 mt-7 mb-7">
-                    <label htmlFor="">Course Name</label>
-                    <input
-                        name="coursName"
-                        className='block px-5 w-full lg:w-[28rem] bg-[#040B35] border h-12'
-                        placeholder='Course Name'
-                        type="text"
-                        required
-                    />
+            {isConnected && (
+                <div className="mb-4 text-green-500">
+                    Connected Wallet Address: {connectedAddress}
                 </div>
-                <div className="space-y-2 mb-7">
-                    <label htmlFor="">Recipient Address</label>
-                    <input
-                        name="address"
-                        placeholder="Address To Recieve cert"
-                        className='block px-5 w-full lg:w-[28rem] bg-[#040B35] border h-12'
-                        type="text"
-                        required
-                    />
-                </div>
-                <div className="space-y-2 mb-7">
-                    <label htmlFor="">Token URI</label>
-                    <input
-                        name="tokenURI"
-                        placeholder="Token URI"
-                        className='block px-5 w-full lg:w-[28rem] bg-[#040B35] border h-12'
-                        type="text"
-                        required
-                    />
-                </div>
-                <div className="space-y-2 mb-7">
-                    <label htmlFor="">Amount</label>
-                    <input
-                        name="value"
-                         placeholder="AMount"
-                        className='block px-5 w-full lg:w-[28rem] bg-[#040B35] border h-12'
-                        type="number"
-                        step="0.000000001"
-                        required
-                    />
-                </div>
-                <button type='submit' disabled={isPending} className="border text-white hover:border-[#E6169B] p-3 w-full flex-shrink-0 text-sm lg:text-lg md:text-lg">{isPending ? 'Minting Your NFT...' : 'Mint'}</button>
-            </form>
+            )}
+            {completedCourses.map((course) => (
+                <form key={course.id} className="set" onSubmit={(e) => submit(e, course)}>
+                    <div className="space-y-2 mt-7 mb-7">
+                        <label htmlFor="">Course Name</label>
+                        <input
+                            value={course.title}
+                            disabled
+                            className='block px-5 w-full lg:w-[28rem] bg-[#040B35] border h-12 cursor-not-allowed'
+                            type="text"
+                        />
+                    </div>
+                    <div className="space-y-2 mb-7">
+                        <label htmlFor="">Recipient Address</label>
+                        <input
+                            name="address"
+                            placeholder={isConnected ? 'Copy/paste wallet or edit' : 'Connect wallet to proceed'}
+                            className='block px-5 w-full lg:w-[28rem] bg-[#040B35] border h-12'
+                            type="text"
+                            required
+                        />
+                    </div>
+                    <div className="space-y-2 mb-7">
+                        <label htmlFor="">Token URI</label>
+                        <input
+                            value={course.tokenURI}
+                            className='block px-5 w-full lg:w-[28rem] bg-[#040B35] border h-12'
+                            type="text"
+                            disabled
+                        />
+                    </div>
+                    <div className="space-y-2 mb-7">
+                        <label htmlFor="">Amount</label>
+                        <input
+                            value={course.certificatePrice}
+                            placeholder="Amount"
+                            className='block px-5 w-full lg:w-[28rem] bg-[#040B35] border h-12 cursor-not-allowed'
+                            type="text"
+                            disabled
+                        />
+                    </div>
+                    <button
+                        type='submit'
+                        disabled={isPending}
+                        className="border text-white hover:border-[#E6169B] p-3 w-full flex-shrink-0 text-sm lg:text-lg md:text-lg"
+                    >
+                        {isPending ? 'Minting Your NFT...' : 'Mint'}
+                    </button>
+                </form>
+            ))}
             {transactionHash && (
                 <div className="mt-4">
                     <p>Transaction Hash: {transactionHash}</p>
@@ -98,9 +110,8 @@ export function MintCertification() {
                     </a>
                 </div>
             )}
-            {/* {isConfirming && <div className="mt-2">Waiting for confirmation...</div>} */}
             {isConfirming && <div className="mt-2 text-green-500">Token Minted successfully.</div>}
-            {error && (<div className="mt-2 text-red-500">Error: {(error as BaseError).shortMessage || error.message}</div>)}
+            {error && (<div className="mt-2 text-red-500 w-52 sm-hidden max-w-96">Error: {error.message}</div>)}
         </div>
-    )
+    );
 }

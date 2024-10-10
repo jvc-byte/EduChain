@@ -8,7 +8,8 @@ export const videoData = [
       imageUrl: "/feature1.svg",
       name: "Educhain",
       videoUrl: 'https://youtu.be/6R_er-V81nI?si=NJ_N9Q6WD-2NBxXa',
-      certificatePrice: 1,
+      certificatePrice: 0.1,
+      tokenURI: "https://ipfs.filebase.io/ipfs/QmQ5rSc4LrRTUSMawpYwLK35rVW4nPgaj3TUBCcpvGVXFh",
 
     },
     {
@@ -20,7 +21,8 @@ export const videoData = [
       imageUrl: "/feature1.svg",
       name: "Educhain",
       videoUrl: 'https://youtu.be/6R_er-V81nI?si=NJ_N9Q6WD-2NBxXa',
-      certificatePrice: 1,
+      certificatePrice: 0.1,
+      tokenURI: "https://ipfs.filebase.io/ipfs/QmQ5rSc4LrRTUSMawpYwLK35rVW4nPgaj3TUBCcpvGVXFh",
 
     },
     {
@@ -32,7 +34,8 @@ export const videoData = [
       imageUrl: "/feature1.svg",
       name: "Educhain",
       videoUrl: 'https://youtu.be/6R_er-V81nI?si=NJ_N9Q6WD-2NBxXa',
-      certificatePrice: 1,
+      certificatePrice: 0.1,
+      tokenURI: "https://ipfs.filebase.io/ipfs/QmQ5rSc4LrRTUSMawpYwLK35rVW4nPgaj3TUBCcpvGVXFh",
     }
   ];
 
@@ -45,7 +48,8 @@ export const videoData = [
        description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
        name: 'Educhain',
        videoUrl: 'https://youtu.be/6R_er-V81nI?si=NJ_N9Q6WD-2NBxXa',
-       certificatePrice: 1,
+       certificatePrice: 0.1,
+       tokenURI: "https://ipfs.filebase.io/ipfs/QmQ5rSc4LrRTUSMawpYwLK35rVW4nPgaj3TUBCcpvGVXFh",
     },
     {
       id: 2,
@@ -55,7 +59,8 @@ export const videoData = [
       description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
       name: 'Educhain',
       videoUrl: 'https://www.youtube.com/watch?v=LXb3EKWsInQ',
-      certificatePrice: 1,
+      certificatePrice: 0.1,
+      tokenURI: "https://ipfs.filebase.io/ipfs/QmQ5rSc4LrRTUSMawpYwLK35rVW4nPgaj3TUBCcpvGVXFh",
    },
    {
     id: 3,
@@ -65,7 +70,8 @@ export const videoData = [
     description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
     name: 'Educhain',
     videoUrl: 'https://youtu.be/6R_er-V81nI?si=rqFVDeiq00Toedsf',
-    certificatePrice: 1,
+    certificatePrice: 0.1,
+    tokenURI: "https://ipfs.filebase.io/ipfs/QmQ5rSc4LrRTUSMawpYwLK35rVW4nPgaj3TUBCcpvGVXFh",
    },
    {
     id: 4,
@@ -75,7 +81,8 @@ export const videoData = [
     description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
     name: 'Educhain',
     videoUrl: 'https://www.youtube.com/watch?v=LXb3EKWsInQ',
-    certificatePrice: 1,
+    certificatePrice: 0.1,
+    tokenURI: "https://ipfs.filebase.io/ipfs/QmQ5rSc4LrRTUSMawpYwLK35rVW4nPgaj3TUBCcpvGVXFh",
  },
   ];
 
@@ -88,7 +95,8 @@ export const videoData = [
        description: 'New What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
        name: 'Educhain',
        videoUrl: 'https://www.youtube.com/watch?v=LXb3EKWsInQ',
-       certificatePrice: 1,
+       certificatePrice: 0.1,
+       tokenURI: "https://ipfs.filebase.io/ipfs/QmQ5rSc4LrRTUSMawpYwLK35rVW4nPgaj3TUBCcpvGVXFh",
     },
     {
       id: 6,
@@ -98,7 +106,8 @@ export const videoData = [
       description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
       name: 'Educhain',
       videoUrl: 'https://youtu.be/6R_er-V81nI?si=NJ_N9Q6WD-2NBxXa',
-      certificatePrice: 1,
+      certificatePrice: 0.1,
+      tokenURI: "https://ipfs.filebase.io/ipfs/QmQ5rSc4LrRTUSMawpYwLK35rVW4nPgaj3TUBCcpvGVXFh",
    },
    {
     id: 7,
@@ -108,7 +117,8 @@ export const videoData = [
     description: 'What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.',
     name: 'Educhain',
     videoUrl: 'https://www.youtube.com/watch?v=LXb3EKWsInQ',
-    certificatePrice: 1,
+    certificatePrice: 0.1,
+    tokenURI: "https://ipfs.filebase.io/ipfs/QmQ5rSc4LrRTUSMawpYwLK35rVW4nPgaj3TUBCcpvGVXFh",
    },
   ];
   

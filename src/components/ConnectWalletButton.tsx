@@ -63,7 +63,7 @@ function WalletComponent() {
             {ensName ? ensName : 'No Base Name'}
           </div>
           
-          <div className="block">
+          <div className="block space-x-3">
             <Address isSliced={true} className="text-white sm-hidden" />
             <EthBalance className="text-white sm-hidden" />
           </div>
