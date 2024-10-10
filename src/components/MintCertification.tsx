@@ -44,7 +44,7 @@ export function MintCertification() {
     return (
         <div className="pb-7">
             {isConnected && (
-                <div className="mb-4 text-green-500">
+                <div className="my-4 text-xs lg:text-lg md:text-lg text-green-500">
                     Connected Wallet Address: {connectedAddress}
                 </div>
             )}
