@@ -55,7 +55,7 @@ function WalletComponent() {
         <WalletDropdownDisconnect className="mr-10" />
       </WalletDropdown>
 
-      <ToastContainer autoClose={false} pauseOnFocusLoss={true} />
+      <ToastContainer  pauseOnFocusLoss={true} />
 
       {showModal && (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
