@@ -20,7 +20,7 @@ export function MintCertification() {
         const address = formData.get('address') as Hex;
 
         // Ensure that the certificate price is converted to a string before passing it to parseEther
-        const price = course.certificatePrice ? parseEther(course.certificatePrice.toString()) : '0';
+        const price = course.certificatePrice ? parseEther(course.certificatePrice) : '0';
 
         writeContract({
             abi: contractABI,
@@ -85,6 +85,7 @@ export function MintCertification() {
                             placeholder="Amount"
                             className='block px-5 w-full lg:w-[28rem] bg-[#040B35] border h-12 cursor-not-allowed'
                             type="text"
+                            step="0.000000001"
                             disabled
                         />
                     </div>
