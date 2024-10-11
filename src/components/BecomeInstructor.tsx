@@ -1,4 +1,4 @@
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const BecomeInstructor = () => {
@@ -12,7 +12,6 @@ const BecomeInstructor = () => {
                     <h1 className='text-3xl '>Become an Instructor</h1>
                     <p className='text-xs'>Web3 Instructors worldwide empower millions of learners on Educhain. We offer the tools and resources you need to share your passion and teach what you love.</p>
                     <button onClick={notify} className='border text-white hover:border-[#E6169B] p-3'>Start Teaching Today</button>
-                    <ToastContainer />
                 </div>
             </div>
         </div>
