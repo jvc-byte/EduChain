@@ -111,7 +111,7 @@ export function MintCertification() {
                 </div>
             )}
             {isConfirming && <div className="mt-2 text-green-500">Token Minted successfully.</div>}
-            {error && (<div className="mt-2 text-red-500 w-52 sm-hidden max-w-96">Error: {error.message}</div>)}
+            {error && (<div className="mt-2 text-red-500">Error: {(error as BaseError).shortMessage || error.message}</div>)}
         </div>
     );
 }
