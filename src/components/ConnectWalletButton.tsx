@@ -18,15 +18,20 @@ function WalletComponent() {
     try {
       const country = await getUserCountryFromIP();
       setLocation(country);
-
+  
       if (country === 'Nigeria') {
-        toast("Access detected from Nigeria. Please use a VPN. We recommend Proton VPN. Refresh the page and try again.");
+        const toastId = 'nigeria-warning';
+        if (!toast.isActive(toastId)) {
+          toast("Access detected from Nigeria. Please use a VPN. We recommend Proton VPN. Refresh the page and try again.", {
+            toastId,
+          });
+        }
       }
     } catch (error) {
       console.error("Error fetching user location:", error);
     }
   };
-
+  
   
   // Function to toggle modal visibility
   const toggleModal = () => {
@@ -55,7 +60,7 @@ function WalletComponent() {
         <WalletDropdownDisconnect className="mr-10" />
       </WalletDropdown>
 
-      <ToastContainer limit={1}  pauseOnFocusLoss={true} />
+      <ToastContainer limit={1} autoClose={20000}  pauseOnFocusLoss={true} />
 
       {showModal && (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
