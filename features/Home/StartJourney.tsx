@@ -8,7 +8,7 @@ const StartJourney = () => {
           <h1 className='text-3xl font-bold py-10'>Start Your Academy Journey</h1>
           <p>EduChain is committed to empowering every Users to get relevant tutorials from our custom data. With EduChain, you'll confidently take your first step into this exciting frontier, followed by a personalized learning path that equips you to forge new trails in your Academy space. Ready to begin your adventure? Let's get started!</p>
 
-          <div className="block lg:flex md:flex justify-between text-black">
+          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 text-black">
             <StartJourneyCard 
              imageUrl='./start1.svg' 
              title='Enhance and Elevate Your Expertise.' 

@@ -1,5 +1,5 @@
 import React, { FormEvent, useState } from 'react';
-import { useWriteContract, useWaitForTransactionReceipt, useAccount } from 'wagmi';
+import { type BaseError, useWriteContract, useWaitForTransactionReceipt, useAccount } from 'wagmi';
 import { contractABI, contractAddress } from '../DeployedContract';
 import { parseEther, type Hex } from 'viem';
 import { useSelector } from 'react-redux';

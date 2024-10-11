@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { ConnectWallet, WalletDropdown, WalletDropdownDisconnect } from '@coinbase/onchainkit/wallet';
-import { Avatar, Name, Address, EthBalance, getName } from '@coinbase/onchainkit/identity';
+import { Avatar, Name, Address, EthBalance } from '@coinbase/onchainkit/identity';
 import { getUserCountryFromIP } from './locationUtils'; // Import the utility function
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,8 +12,6 @@ import { IoIosClose } from "react-icons/io";
 function WalletComponent() {
   const [location, setLocation] = useState<string | null>(null);
   const [showModal, setShowModal] = useState(false); // State to manage modal visibility
-  const [address, setAddress] = useState<string | null>(null); // Store wallet address
-  const [ensName, setEnsName] = useState<string | null>(null); // Store ENS name or base name
 
   // Function to check location and show toast
   const checkLocationAndShowToast = async () => {
@@ -29,22 +27,7 @@ function WalletComponent() {
     }
   };
 
-  // Fetch the ENS name or base name based on the wallet address
-  useEffect(() => {
-    const fetchEnsName = async () => {
-      if (address) {
-        try {
-          const name = await getName({ address, chain: base });
-          setEnsName(name || 'No ENS Name Found');
-        } catch (error) {
-          console.error("Error fetching ENS name:", error);
-        }
-      }
-    };
-
-    fetchEnsName();
-  }, [address]);
-
+  
   // Function to toggle modal visibility
   const toggleModal = () => {
     setShowModal(!showModal);
@@ -54,17 +37,15 @@ function WalletComponent() {
     <div>
       <div className="" onClick={() => { checkLocationAndShowToast(); toggleModal(); }}>
         <ConnectWallet className="border text-white text-sm lg:text-2xl items-center bg-[#040B35] mr-8 lg:mr-0 md:mr-8 p-3" 
-          onConnect={(connectedAddress) => setAddress(connectedAddress)} // Set the address when wallet is connected
         >
           <Avatar chain={base} className="bg-white" />
           
-          {/* Display the fetched ENS or base name */}
           <div className="text-white text-xs lg:text-lg md:text-sm">
-            {ensName ? ensName : 'No Base Name'}
+            <Name chain={base} className='text-white' />
           </div>
           
           <div className="block space-x-3">
-            <Address isSliced={true} className="text-white sm-hidden" />
+            <Address className="text-white sm-hidden" />
             <EthBalance className="text-white sm-hidden" />
           </div>
         </ConnectWallet>
