@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import { Link } from 'react-router-dom';
 
 interface StartJourneyProps {
   imageUrl: string;
@@ -47,7 +48,11 @@ const FeatureCard: React.FC<StartJourneyProps> = ({ imageUrl, logo, title, descr
               <h1>{name}</h1>
             </div>
 
-            <button className="border text-white hover:border-[#E6169B] p-3">Explore Lessons</button>
+            <Link
+              to="/learningpage"
+              >
+              <button className="border my-5 text-white hover:border-[#E6169B] p-3">Explore Lessons</button>
+            </Link>
           </div>
         </div>
       </div>

@@ -14,10 +14,14 @@ export function MintCertification() {
         hash,
     });
 
+    
+
     async function submit(e: FormEvent<HTMLFormElement>, course: any) {
         e.preventDefault();
         const formData = new FormData(e.target as HTMLFormElement);
         const address = formData.get('address') as Hex;
+
+        
 
         // Ensure that the certificate price is converted to a string before passing it to parseEther
         const price = course.certificatePrice ? parseEther(course.certificatePrice) : '0';

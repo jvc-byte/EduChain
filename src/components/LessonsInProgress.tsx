@@ -22,7 +22,7 @@ const LessonsInProgress = () => {
         {selectedCourses.map((course) => (
           <div className="space-y-5 py-5 flex" key={course.id}>
             <div className="mx-auto border w-[80%] border-[#1600a6] text-white">
-              <div className="block lg:flex md:flex items-center gap-10 w-full lg:w-[80%] md:w-[80%]">
+              <div className="block lg:flex md:flex gap-10 w-full lg:w-[80%] md:w-[80%]">
                 <img
                   src={course.imageUrl}
                   alt={course.title}
