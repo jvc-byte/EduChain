@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import FeatureCard from '../../src/components/FeatureCard'
 
 const FeatureContent = () => {
@@ -12,14 +12,14 @@ const FeatureContent = () => {
        name='Educhain' 
        />
 
-    <FeatureCard imageUrl='./feature1.svg' 
+    <FeatureCard imageUrl='/bitcoin.jpg' 
        logo='./start1.svg' 
        title='Bitcoin Basics' 
        description='What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.' 
        name='Educhain' 
     />
 
-    <FeatureCard imageUrl='./feature1.svg' 
+    <FeatureCard imageUrl='/Wallets.jpg' 
        logo='./start1.svg' 
        title='Wallets Basics' 
        description='What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.' 

@@ -1,7 +1,7 @@
 export const videoData = [
   {
     id: 7,
-    imageUrl: '/feature1.svg' ,
+    imageUrl: '/bitcoin.jpg' ,
     logo: '/start1.svg', 
     title: 'Bitcoin Basics', 
     description: 'Understanding Bitcoin: Revolutionizing Money and Financial Freedom In 2009, an anonymous figure known as Satoshi Nakamoto launched Bitcoin, sparking a global conversation about the future of money. For centuries, the control of money has rested in the hands of governments and banks, but Bitcoin introduces the idea that it should be in the hands of everyday citizens. This shift in control is crucial, as most of us don’t fully understand how little control we have over our money today.',
@@ -23,7 +23,7 @@ export const videoData = [
 },
 {
  id: 9,
- imageUrl: '/feature1.svg' ,
+ imageUrl: '/Wallets.jpg' ,
  logo: '/start1.svg', 
  title: 'Wallets basics', 
  description: 'Reclaiming Control: The Power of Crypto Wallets in a Decentralized Internet. The internet has evolved into humanity’s most powerful tool for connection, creativity, and innovation. Yet, despite its global reach, it’s dominated by centralized corporations that control much of what we do online. From banks managing your financial transactions to social platforms monitoring your interactions, intermediaries hold immense power over your digital exchanges. But what if you could take back control? This is where crypto wallets and decentralized applications (dApps) come in, enabling you to own your digital identity and assets.',
@@ -37,7 +37,7 @@ export const videoData = [
   export const PopularCertificateCourse = [
     {
        id: 1,
-       imageUrl: '/feature1.svg' ,
+       imageUrl: '/bitcoin.jpg' ,
        logo: '/start1.svg', 
        title: 'Bitcoin Basics', 
        description: 'Understanding Bitcoin: Revolutionizing Money and Financial Freedom In 2009, an anonymous figure known as Satoshi Nakamoto launched Bitcoin, sparking a global conversation about the future of money. For centuries, the control of money has rested in the hands of governments and banks, but Bitcoin introduces the idea that it should be in the hands of everyday citizens. This shift in control is crucial, as most of us don’t fully understand how little control we have over our money today.',
@@ -59,7 +59,7 @@ export const videoData = [
    },
    {
     id: 3,
-    imageUrl: '/feature1.svg' ,
+    imageUrl: '/Wallets.jpg' ,
     logo: '/start1.svg', 
     title: 'Wallets basics', 
     description: 'Reclaiming Control: The Power of Crypto Wallets in a Decentralized Internet. The internet has evolved into humanity’s most powerful tool for connection, creativity, and innovation. Yet, despite its global reach, it’s dominated by centralized corporations that control much of what we do online. From banks managing your financial transactions to social platforms monitoring your interactions, intermediaries hold immense power over your digital exchanges. But what if you could take back control? This is where crypto wallets and decentralized applications (dApps) come in, enabling you to own your digital identity and assets.',
@@ -95,7 +95,7 @@ export const videoData = [
   },
   {
    id: 6,
-   imageUrl: '/feature1.svg' ,
+   imageUrl: '/Wallets.jpg' ,
    logo: '/start1.svg', 
    title: 'Wallets basics', 
    description: 'Reclaiming Control: The Power of Crypto Wallets in a Decentralized Internet. The internet has evolved into humanity’s most powerful tool for connection, creativity, and innovation. Yet, despite its global reach, it’s dominated by centralized corporations that control much of what we do online. From banks managing your financial transactions to social platforms monitoring your interactions, intermediaries hold immense power over your digital exchanges. But what if you could take back control? This is where crypto wallets and decentralized applications (dApps) come in, enabling you to own your digital identity and assets.',

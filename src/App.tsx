@@ -11,6 +11,7 @@ import ClassRoom from './components/ClassRoom';
 import QuizPage from './components/QuizPage';
 import LessonCompleted from './components/LessonCompleted'; 
 import MintCertificate from './components/MintCertificate';
+import { SignupFormDemo } from './components/RegisterTutorForm';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/quiz/:id" element={<QuizPage />} />
           <Route path="/my-lessons/:id" element={<LessonCompleted />} />
           <Route path="/mintcertificate/:id" element={<MintCertificate />} />
+          <Route path="/register" element={<SignupFormDemo />} />
 
 
         </Routes>

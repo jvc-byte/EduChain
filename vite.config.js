@@ -7,6 +7,11 @@ export default defineConfig({
       '@': '/src',
     },
   },
+  images: {
+    domains: [
+      "api.microlink.io", // Microlink Image Preview
+    ],
+  },
   plugins: [react()],
   build: {
     outDir: 'dist',
