@@ -6,8 +6,8 @@ const Footer = () => {
         
             <div className="flex gap-10 lg:gap-20 md:gap-16">
                 <div className="block list-none underline py-5 flex-shrink-0">
-                    <a><li>Tea Protocol</li> </a>
-                    <a><li>Teach on Tea Protocol</li> </a>
+                    <a><li>EduChain</li> </a>
+                    <a><li>Teach on EduChain</li> </a>
                     <a><li>About us</li></a>
                     <a><li>Contact us</li></a>
                 </div>
@@ -27,8 +27,8 @@ const Footer = () => {
         
         </div>
         <div className="flex justify-between items-center px-5 lg:px-28 md:px-28 border-none">
-            <img src="/tea.jpg" alt="" className="w-32 lg:w-40 md:w-40"/>
-            <h2 className="text-white flex-shrink-0">© 2024 Tea Protocol.</h2>
+            <img src="/logo.svg" alt="" className="w-32 lg:w-40 md:w-40"/>
+            <h2 className="text-white flex-shrink-0">© 2024 EduChain.</h2>
         </div>
     </div>
     

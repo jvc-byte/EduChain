@@ -7,25 +7,24 @@ const FeatureContent = () => {
       <FeatureCard 
        imageUrl='./feature1.svg' 
        logo='./start1.svg' 
-       title='Donate TEA to OSS projects' 
-       description='How to donate TEA to OSS projects' 
-       name='Tea Protocol' 
+       title='Ethereum Basics' 
+       description='What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.' 
+       name='Educhain' 
        />
 
     <FeatureCard imageUrl='/bitcoin.jpg' 
        logo='./start1.svg' 
-       title='Jason Coombs & Max Howel' 
-       description='Jason Coombs & Max Howel - AMA' 
-       name='Tea Protocol' 
+       title='Bitcoin Basics' 
+       description='What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.' 
+       name='Educhain' 
     />
 
     <FeatureCard imageUrl='/Wallets.jpg' 
        logo='./start1.svg' 
-       title='Stake and Unstake Tea' 
-       description='How to stake and unstake tea' 
-       name='Tea Protocol' 
+       title='Wallets Basics' 
+       description='What is Ethereum? Discover the “new internet” and unlock your digital freedom through the power of decentralized technology.' 
+       name='Educhain' 
     />
-
     </div>
   )
 }
