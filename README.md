@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://edu-chain-nine.vercel.app/logo.svg" alt="EduChain Logo" width="200"/>
+</p>
+
 # EduChain 🎓
 
 Empowering learners with decentralized, accessible education. Earn verifiable certificates directly to your wallet and carry them with you anywhere.
@@ -87,7 +91,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact 📧
 
-Project Link: [EduChain](https://github.com/jvc-byte/EduChain)
+Project Link: [EduChain](https://edu-chain-nine.vercel.app/)
 
 ---
 
